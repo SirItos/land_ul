@@ -1,0 +1,8 @@
+@tailwind base;
+@tailwind components;
+
+@tailwind utilities;
+
+.slick-active .slide {
+  transform: scaleY(1) !important;
+}
