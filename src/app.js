@@ -5,6 +5,9 @@ import 'slick-carousel/slick/slick.css'
 // Подключение библиотек
 import $ from 'jquery'
 import 'slick-carousel'
+import { initModal } from './js/modal'
+import { btnClick } from './js/forma'
+import { appear } from './js/appear'
 
 $(document).ready(() => {
   $('#slider').slick({
@@ -23,4 +26,17 @@ $(document).ready(() => {
     autoplay: true,
     autoplaySpeed: 6000
   })
+
+  $('.learn-more').click(function () {
+    $([document.documentElement, document.body]).animate(
+      {
+        scrollTop: $('.first-elem').offset().top
+      },
+      600
+    )
+  })
+
+  initModal()
+  btnClick()
+  appear()
 })

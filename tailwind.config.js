@@ -14,7 +14,14 @@ module.exports = {
       emerald: colors.emerald,
       teal: colors.teal,
       amber: colors.amber,
-      accent: '#A67610'
+      accent: '#A67610',
+      gray: colors.gray
+    },
+    minWidth: {
+      '1/4': '25%',
+      '1/2': '50%',
+      '3/4': '75%',
+      full: '100%'
     },
     extend: {
       fontFamily: {
