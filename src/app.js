@@ -1,5 +1,5 @@
 // Подключение CSS
-import './styles/app.sass'
+import './styles/app.css'
 import 'slick-carousel/slick/slick.css'
 
 // Подключение библиотек

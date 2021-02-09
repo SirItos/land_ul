@@ -1,6 +1,16 @@
 @tailwind base;
 @tailwind components;
 
+@font-face {
+  font-family: 'San Francisco Pro Display Regular';
+  src: url('./src/styles/fonts/SFProDisplay-Regular.eot');
+  src: url('./src/styles/fonts/SFProDisplay-Regular.eot?#iefix')
+      format('embedded-opentype'),
+    url('./src/styles/fonts/SFProDisplay-Regular.woff') format('woff'),
+    url('./src/styles/fonts/SFProDisplay-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
 @tailwind utilities;
 
 .slick-active .slide {
