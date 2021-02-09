@@ -64,13 +64,19 @@
 
         <!-- why -->
         <div class=" mx-auto pt-6 space-y-10 first-elem">
-            <div class="container py-4 px-6  opacity-0 transform translate-y-10 segment ">
-                <div class="text-lg font-semibold text-2xl  text-center ">
+            <div class="container py-4 px-6   opacity-0 transform translate-y-10 segment ">
+                <div class="text-lg font-semibold text-2xl  text-center mb-10">
                     Зачем мне это?
                 </div>
                 <div class="space-y-10  ">
-                    <div class="flex flex-wrap items-end">
-                        <div class="text-amber-400 text-6xl font-semibold">1.</div>
+                    <div class="flex flex-wrap items-end relative">
+                        <div class="text-amber-400 text-6xl font-semibold">
+                            <img src="./src/assets/healthy-food.svg" alt="food" style="width:140px"
+                                class="max-w-full max-h-full transform translate-y-4 -translate-x-8 " />
+                        </div>
+                        <!-- <div class="absolute h-full left-2" style="z-index:-1"> -->
+
+                        <!-- </div> -->
                         <div class="flex-grow flex items-center justify-center h-32">
                             Описание шага
                         </div>
@@ -79,7 +85,10 @@
                         </div>
                     </div>
                     <div class="flex flex-wrap items-end">
-                        <div class="text-amber-400 text-6xl font-semibold">2.</div>
+                        <div class="text-amber-400 text-6xl font-semibold">
+                            <img src="./src/assets/fitness.svg" alt="food" style="width:140px"
+                                class="max-w-full max-h-full transform translate-y-4 -translate-x-6 " />
+                        </div>
                         <div class="flex-grow flex items-center justify-center h-32">
                             Описание шага
                         </div>
@@ -88,7 +97,10 @@
                         </div>
                     </div>
                     <div class="flex flex-wrap items-end">
-                        <div class="text-amber-400 text-6xl font-semibold">3.</div>
+                        <div class="text-amber-400 text-6xl font-semibold">
+                            <img src="./src/assets/heartbeat.svg" alt="food" style="width:140px"
+                                class="max-w-full max-h-full transform translate-y-4 -translate-x-4 " />
+                        </div>
                         <div class="flex-grow flex items-center justify-center h-32">
                             Описание шага
                         </div>
@@ -261,13 +273,22 @@
         </div>
 
     </div>
+    <!-- hidden form -->
+
+    <form id="pay-form" class="hidden" action='https://auth.robokassa.ru/Merchant/Index.aspx' method=POST>
+        <input type=hidden name=MerchantLogin>
+        <input type=hidden name=OutSum>
+        <input type=hidden name=Description>
+        <input type=hidden name=SignatureValue>
+
+    </form>
     <!-- Modal -->
     <div id="modal-wrapper"
         class=" opacity-0 bg-gray-600 bg-opacity-60 fixed top-0 left-0 w-screen h-screen   flex items-center justify-center"
         style="z-index:-100">
         <div id="modal"
             class="min-w-3/4 rounded-lg bg-white shadow-lg  py-4 px-4 transition  duration-300 transform scale-0 ">
-            <div class="flex items-center">
+            <div class="flex items-center loader hidden">
                 <div class="mr-4">
                     <svg class="animate-spin -ml-1 mr-3 h-5 w-5 fill-current text-amber-400"
                         xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
@@ -280,9 +301,31 @@
                 </div>
                 <div class="flex-grow">Подождите...</div>
             </div>
+            <div class="text-2xl text-center hidden successDialog">
+                Спасибо за покупку!
+                <div class="py-6">
+                    <button class=" py-2 px-4
+                                    text-дп
+                                     text-white 
+                                     font-semibold 
+                                     rounded-lg 
+                                     shadow-md 
+                                     focus:outline-none 
+                                     bg-amber-400  
+                                     transition duration-300 ease-in-out
+                                     get-result
+                                     
+                                                ">
+                        Получить гайд
+                    </button>
+                    <!-- ВЫнести в PHP и обрабатывать наличие на сервере -->
+                    <a href="./guide.pdf" download class="hidden get-result-link">123123</a>
+                </div>
+            </div>
 
         </div>
     </div>
+
     <script type="module" src="./src/app.js"></script>
 </body>
 

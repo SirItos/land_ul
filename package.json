@@ -6,6 +6,7 @@
   "scripts": {
     "snowpack_init": "snowpack init",
     "dev": "snowpack dev",
+    "build": "snowpack build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",

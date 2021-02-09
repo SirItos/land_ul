@@ -2,7 +2,7 @@ import $ from 'jquery'
 
 export const appear = () => {
   const hiddenSegments = $('.segment')
-  const startScrollPosition = $(document).scrollTop()
+
   // delay for render
   setTimeout(() => {
     hiddenSegments.each(function () {
@@ -23,7 +23,7 @@ export const appear = () => {
   }, 200)
 }
 
-const showThatIsAboveBelow = (elem, startPosition) => {
+const showThatIsAboveBelow = (elem) => {
   console.log()
   if (checkVisible(elem, 0, 'above') || checkVisible(elem)) {
     appearElement(elem)
