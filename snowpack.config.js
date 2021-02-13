@@ -6,8 +6,28 @@ module.exports = {
   mount: {
     /* ... */
   },
+  exclude: [
+    '**/node_modules/**/*',
+    '**/.prettierrc',
+    '**/package-lock.json',
+    '**/package.json',
+    '**/deploy.sh',
+    '**/snowpack.config.js',
+    '**/postcss.config.js',
+    '**/tailwind.config.js',
+    '**/.gitignore'
+  ],
   // ]
-  plugins: ['@snowpack/plugin-sass', '@snowpack/plugin-postcss'],
+  plugins: [
+    [
+      '@snowpack/plugin-babel',
+      {
+        input: ['.js'] // (optional) specify files for Babel to transform
+      }
+    ],
+    '@snowpack/plugin-sass',
+    '@snowpack/plugin-postcss'
+  ],
   packageOptions: {
     /* ... */
   },
@@ -16,5 +36,11 @@ module.exports = {
   },
   buildOptions: {
     /* ... */
+  },
+  optimize: {
+    bundle: true,
+    treeshake: true,
+    minify: true,
+    target: 'es2018'
   }
 }
