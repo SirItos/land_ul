@@ -12,6 +12,10 @@
 }
 @tailwind utilities;
 
+body {
+  scroll-behavior: smooth;
+}
+
 .slick-active .slide {
   transform: scaleY(1) !important;
 }

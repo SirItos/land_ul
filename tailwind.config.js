@@ -15,7 +15,8 @@ module.exports = {
       teal: colors.teal,
       amber: colors.amber,
       accent: '#A67610',
-      gray: colors.gray
+      gray: colors.gray,
+      red: colors.red
     },
     minWidth: {
       '1/4': '25%',

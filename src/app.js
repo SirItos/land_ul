@@ -8,6 +8,7 @@ import 'slick-carousel'
 import { initModal } from './js/modal'
 import { btnClick } from './js/forma'
 import { appear } from './js/appear'
+import { initForm } from './js/forma'
 
 $(document).ready(() => {
   $('#slider').slick({
@@ -38,4 +39,5 @@ $(document).ready(() => {
   initModal()
   btnClick()
   appear()
+  initForm()
 })

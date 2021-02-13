@@ -253,19 +253,53 @@
             </div>
 
             <div class="bg-gradient-to-bl from-emerald-400 to-teal-500 py-12 px-6">
-                <div class="flex justify-center opacity-0 transform translate-y-10 segment">
-                    <button class=" py-2 px-4
-                    text-2xl
-                            text-white 
-                            font-semibold 
-                            rounded-lg 
-                            shadow-md 
-                            focus:outline-none 
-                            bg-amber-400  
-                            transition duration-300 ease-in-out">
-                        Купить купить купить
-                    </button>
+                <!-- form -->
+                <div class="bg-white rounded-lg  shadow-lg  px-4 py-4 opacity-0 transform translate-y-10 segment">
+                    <form id="pay-form" class="space-y-8" action='https://auth.robokassa.ru/Merchant/Index.aspx'
+                        method=POST>
+                        <div class="text-2xl text-center"> Приобрести что-то</div>
+                        <div class="w-full relative input-group">
+                            <input
+                                class="border border-gray-200 px-2 py-2 w-full rounded-md transition duration-300 focus:outline-none focus:ring-2 ring-teal-200"
+                                type="tel" name="phone" placeholder="Номер телефона" />
+
+                            <div class="error px-2 absolute overflow-hidden ">
+                                <div class="transition duration-300 transform -translate-y-10 text-red-700 ">Необходимо
+                                    заполнить поле</div>
+                            </div>
+                        </div>
+                        <div class="w-full relative">
+                            <input
+                                class="nickname border border-gray-200 px-2 py-2 w-full rounded-md transition duration-300 focus:outline-none focus:ring-2 ring-teal-200"
+                                type="text" name="nickname" placeholder="Ник в instagram" />
+
+                            <div class="error px-2 absolute overflow-hidden ">
+                                <div class="transition duration-300 transform -translate-y-10 text-red-700 ">Необходимо
+                                    заполнить поле</div>
+                            </div>
+                        </div>
+                        <!-- Hidden inputs -->
+                        <input type=hidden name=MerchantLogin>
+                        <input type=hidden name=OutSum>
+                        <input type=hidden name=Description>
+                        <input type=hidden name=SignatureValue>
+                        <div class="flex justify-center  ">
+                            <button id="pay-form-submit" class="py-2 px-4
+                                            text-2xl
+                                            text-white 
+                                            font-semibold 
+                                            rounded-lg 
+                                            shadow-md 
+                                            focus:outline-none 
+                                            bg-amber-400  
+                                            w-2/4
+                                            transition duration-300 ease-in-out">
+                                Buy
+                            </button>
+                        </div>
+                    </form>
                 </div>
+                <!-- -->
 
             </div>
 
@@ -273,15 +307,10 @@
         </div>
 
     </div>
-    <!-- hidden form -->
 
-    <form id="pay-form" class="hidden" action='https://auth.robokassa.ru/Merchant/Index.aspx' method=POST>
-        <input type=hidden name=MerchantLogin>
-        <input type=hidden name=OutSum>
-        <input type=hidden name=Description>
-        <input type=hidden name=SignatureValue>
 
-    </form>
+
+
     <!-- Modal -->
     <div id="modal-wrapper"
         class=" opacity-0 bg-gray-600 bg-opacity-60 fixed top-0 left-0 w-screen h-screen   flex items-center justify-center"
