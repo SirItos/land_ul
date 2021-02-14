@@ -3,7 +3,7 @@ import 'jquery-mask-plugin'
 import { scrollToTarget } from './scrolling'
 import { resetvalidationOnInput, validation } from './validation'
 import { sendRequest } from './api'
-import { hideModal } from './modal'
+import { hideModal, showModal } from './modal'
 
 const inputs = {
   phone: {
@@ -51,7 +51,7 @@ const clearForm = () => {
 }
 
 export const sccrollToForm = () => {
-  $('button:not(.get-result)').click(() => {
+  $('button:not(.get-result), button:not(.errorBtn)').click(() => {
     scrollToTarget('#pay-form')
   })
 }
@@ -77,16 +77,27 @@ const submitForm = async (inputs) => {
   }
   if (!valid) return
 
-  await sendRequest(payload)
-    .then((result) => {
+  await sendRequest(payload).then(
+    (result) => {
+      if (!result.status) {
+        showModal({
+          error: true
+        })
+        return
+      }
       clearForm()
       withPrevent = false
       $('#pay-form-submit').click()
-    })
-    .catch((error) => {
+      hideModal()
+    },
+    () => {
       clearForm()
-    })
-  hideModal()
+      showModal({
+        error: true
+      })
+      withPrevent = true
+    }
+  )
 }
 
 const setInputVal = () => {}

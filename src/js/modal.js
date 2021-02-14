@@ -28,6 +28,10 @@ export const initModal = () => {
   $('.get-result').click(() => {
     downloadGuide()
   })
+
+  $('.errorBtn').click(() => {
+    hideModal()
+  })
 }
 
 /**
@@ -49,14 +53,16 @@ const modalPlane = () => {
  * @param {boolean} loader
  * @returns void
  */
-export const showModal = (loader = false) => {
+export const showModal = ({ error = false, loader = false }) => {
   state.loader = loader
+  const targetDialog = error ? '.errorDialog' : '.successDialog'
   if (loader) {
     $('.loader').removeClass('hidden')
     $('.successDialog').addClass('hidden')
+    $('.errorDialog').addClass('hidden')
   } else {
     $('.loader').addClass('hidden')
-    $('.successDialog').removeClass('hidden')
+    $(targetDialog).removeClass('hidden')
   }
   wrapper.removeClass('opacity-0').addClass('opacity-100')
   wrapper.css('z-index', '100')

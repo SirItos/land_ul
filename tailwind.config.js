@@ -14,6 +14,7 @@ module.exports = {
       emerald: colors.emerald,
       teal: colors.teal,
       amber: colors.amber,
+      orange: colors.orange,
       accent: '#A67610',
       gray: colors.gray,
       red: colors.red
@@ -27,6 +28,9 @@ module.exports = {
     extend: {
       fontFamily: {
         sf: ['"San Francisco Pro Display Regular"', 'sans-serif']
+      },
+      boxShadow: {
+        btn: '0 8px 15px 3px rgba(251, 146, 60, 0.3)'
       }
     }
   },

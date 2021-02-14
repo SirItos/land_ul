@@ -9,33 +9,40 @@
 
 </head>
 
-<body class=" bg-emerald-50 font-sf box-border">
+<body class=" bg-white font-sf box-border">
     <div class="h-screen">
         <!-- Header -->
-        <div class="shadow-2xl  rounded-b-xl  h-5/6  bg-gradient-to-tl from-emerald-400 to-teal-500  text-white ">
+        <div class="shadow-2xl  rounded-b-xl  h-5/6  bg-gradient-to-tl from-gray-900  to-gray-400  text-white ">
             <div class="container h-full mx-auto py-6">
 
                 <div class="text-2xl h-full font-semibold flex flex-col space-y-5 justify-center ">
                     <div class=" flex-grow w-full min-h-0 ">
                         <div class="h-full w-full flex justify-center">
                             <div
-                                class="opacity-0 transform translate-y-10 segment rounded-full shadow-lg border-white border-8 w-60 h-60">
+                                class="opacity-0 overflow-hidden transform translate-y-10 segment rounded-full shadow-lg border-white border-8 w-60 h-60">
+                                <div>
+                                    <img src="./src/assets/logo.jpg" alt="logo"
+                                        style="transform:translate(5px,-25px) scale(1.1)">
+                                </div>
                             </div>
                         </div>
                     </div>
                     <div class="flex-3 px-12 text-center opacity-0 transform translate-y-10 segment " data-delay="150">
-                        Название курса или еще что.
+                        <div>Название курса или еще что</div>
+                        <div class="text-center text-lg opacity-90">Старт 1 марта</div>
                     </div>
+
                     <div class="flex justify-center  opacity-0 transform translate-y-10 segment " data-delay="200">
                         <button class=" py-2 px-4
                             text-white 
                             font-semibold 
                             rounded-lg 
-                            shadow-md 
+                            
+                            shadow-btn
                             focus:outline-none 
-                            bg-amber-400  
+                            bg-orange-400  
                             transition duration-300 ease-in-out">
-                            Разберемся потом!
+                            Записатсья на курс
                         </button>
                     </div>
                 </div>
@@ -66,245 +73,717 @@
         <div class=" mx-auto pt-6 space-y-10 first-elem">
             <div class="container py-4 px-6   opacity-0 transform translate-y-10 segment ">
                 <div class="text-lg font-semibold text-2xl  text-center mb-10">
-                    Зачем мне это?
+                    Курс для тебя, если ты хочешь:
                 </div>
                 <div class="space-y-10  ">
-                    <div class="flex flex-wrap items-end relative">
-                        <div class="text-amber-400 text-6xl font-semibold">
-                            <img src="./src/assets/healthy-food.svg" alt="food" style="width:140px"
-                                class="max-w-full max-h-full transform translate-y-4 -translate-x-8 " />
-                        </div>
-                        <!-- <div class="absolute h-full left-2" style="z-index:-1"> -->
+                    <div class="flex   relative space-x-4">
+                        <div class="text-orange-400 text-6xl font-semibold mt-3">
+                            <svg class="fill-current" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                viewBox="0 0 24 24">
+                                <path d="M20.285 2l-11.285 11.567-5.286-5.011-3.714 3.716 9 8.728 15-15.285z" />
+                            </svg>
 
-                        <!-- </div> -->
-                        <div class="flex-grow flex items-center justify-center h-32">
-                            Описание шага
                         </div>
-                        <div class="flex mt-6 justify-center w-full">
-                            <Div class='w-1/3 border-b-4 border-dotted border-amber-400'></Div>
+
+                        <div class="flex-grow  ">
+                            <div class="font-semibold">Забыть о проблемах с лишнем весом</div>
+                            <div><span class="italic font-semibold">Результат:</span> скинешь минимум 4-5 кг без срывов
+                                и диет. И
+                                научишься поддерживать
+                                свою форму даже после окончания курса</div>
+                        </div>
+
+                    </div>
+
+                    <div class="flex mt-6 justify-center w-full">
+                        <Div class='w-1/3 border-b-4 border-dotted border-amber-400'></Div>
+                    </div>
+
+
+                    <div class="flex   relative space-x-4">
+                        <div class="text-orange-400 text-6xl font-semibold mt-3">
+                            <svg class="fill-current" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                viewBox="0 0 24 24">
+                                <path d="M20.285 2l-11.285 11.567-5.286-5.011-3.714 3.716 9 8.728 15-15.285z" />
+                            </svg>
+                            <!-- <img src="./src/assets/healthy-food.svg" alt="food" style="width:140px"
+                                                        class="max-w-full max-h-full transform translate-y-4 -translate-x-8 " /> -->
+                        </div>
+
+                        <div class="flex-grow  ">
+                            <div class="font-semibold">Улучшить качество своей кожи</div>
+                            <div><span class="italic font-semibold">Результат:</span> более подтянутая, гладкая и
+                                эластичная кожа без целлюлита</div>
+                        </div>
+
+                    </div>
+
+                    <div class="flex mt-6 justify-center w-full">
+                        <Div class='w-1/3 border-b-4 border-dotted border-amber-400'></Div>
+                    </div>
+                    <div class="flex   relative space-x-4">
+                        <div class="text-orange-400 text-6xl font-semibold mt-3">
+                            <svg class="fill-current" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                viewBox="0 0 24 24">
+                                <path d="M20.285 2l-11.285 11.567-5.286-5.011-3.714 3.716 9 8.728 15-15.285z" />
+                            </svg>
+                            <!-- <img src="./src/assets/healthy-food.svg" alt="food" style="width:140px"
+                                                                            class="max-w-full max-h-full transform translate-y-4 -translate-x-8 " /> -->
+                        </div>
+
+                        <div class="flex-grow  ">
+                            <div class="font-semibold">Разогнать метоболизм</div>
+                            <div><span class="italic font-semibold">Результат:</span> отсутсвие проблем с обменом
+                                веществ</div>
+                        </div>
+
+                    </div>
+
+                    <div class="flex mt-6 justify-center w-full">
+                        <Div class='w-1/3 border-b-4 border-dotted border-amber-400'></Div>
+                    </div>
+                    <div class="flex   relative space-x-4">
+                        <div class="text-orange-400 text-6xl font-semibold mt-3">
+                            <svg class="fill-current" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                viewBox="0 0 24 24">
+                                <path d="M20.285 2l-11.285 11.567-5.286-5.011-3.714 3.716 9 8.728 15-15.285z" />
+                            </svg>
+                            <!-- <img src="./src/assets/healthy-food.svg" alt="food" style="width:140px"
+                                                                                                                    class="max-w-full max-h-full transform translate-y-4 -translate-x-8 " /> -->
+                        </div>
+
+                        <div class="flex-grow  ">
+                            <div class="font-semibold">Вернуться в форму после родов</div>
+                            <div><span class="italic font-semibold">Результат:</span> избавишься от лишнего веса,
+                                уберешь живот и улучшишь качество своей кожи.</div>
+                        </div>
+
+                    </div>
+
+                    <div class="flex mt-6 justify-center w-full">
+                        <Div class='w-1/3 border-b-4 border-dotted border-amber-400'></Div>
+                    </div>
+                    <div class="flex   relative space-x-4">
+                        <div class="text-orange-400 text-6xl font-semibold mt-3">
+                            <svg class="fill-current" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                viewBox="0 0 24 24">
+                                <path d="M20.285 2l-11.285 11.567-5.286-5.011-3.714 3.716 9 8.728 15-15.285z" />
+                            </svg>
+                            <!-- <img src="./src/assets/healthy-food.svg" alt="food" style="width:140px"
+                                                                                                                                                            class="max-w-full max-h-full transform translate-y-4 -translate-x-8 " /> -->
+                        </div>
+
+                        <div class="flex-grow  ">
+                            <div class="font-semibold">Чтобы тебе нравилось свое отражение в зеркале</div>
+                            <div><span class="italic font-semibold">Результат:</span> подтянутая и стройная фигура,
+                                которую ты не захочешь прятать.</div>
+                        </div>
+
+                    </div>
+
+                    <div class="flex mt-6 justify-center w-full">
+                        <Div class='w-1/3 border-b-4 border-dotted border-amber-400'></Div>
+                    </div>
+                    <div class="flex   relative space-x-4">
+                        <div class="text-orange-400 text-6xl font-semibold mt-3">
+                            <svg class="fill-current" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                viewBox="0 0 24 24">
+                                <path d="M20.285 2l-11.285 11.567-5.286-5.011-3.714 3.716 9 8.728 15-15.285z" />
+                            </svg>
+                            <!-- <img src="./src/assets/healthy-food.svg" alt="food" style="width:140px"
+                                                                                                                                                                                                    class="max-w-full max-h-full transform translate-y-4 -translate-x-8 " /> -->
+                        </div>
+
+                        <div class="flex-grow  ">
+                            <div class="font-semibold">Не испытывать чувство усталости в течение дня</div>
+                            <div><span class="italic font-semibold">Результат:</span> увеличешь свою внутреннюю энергию
+                                и перестанешь просыпаться уставшей по утрам.</div>
+                        </div>
+
+                    </div>
+
+                    <div class="flex mt-6 justify-center w-full">
+                        <Div class='w-1/3 border-b-4 border-dotted border-amber-400'></Div>
+                    </div>
+                    <div class="flex   relative space-x-4">
+                        <div class="text-orange-400 text-6xl font-semibold mt-3">
+                            <svg class="fill-current" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                viewBox="0 0 24 24">
+                                <path d="M20.285 2l-11.285 11.567-5.286-5.011-3.714 3.716 9 8.728 15-15.285z" />
+                            </svg>
+                            <!-- <img src="./src/assets/healthy-food.svg" alt="food" style="width:140px"
+                                                                                                                                                                                                                                            class="max-w-full max-h-full transform translate-y-4 -translate-x-8 " /> -->
+                        </div>
+
+                        <div class="flex-grow  ">
+                            <div class="font-semibold">Научиться правильно питаться </div>
+                            <div><span class="italic font-semibold">Результат:</span> научишься составлять меню без
+                                подсчета калорий.</div>
+                        </div>
+
+                    </div>
+
+                    <div class="flex mt-6 justify-center w-full">
+                        <Div class='w-1/3 border-b-4 border-dotted border-amber-400'></Div>
+                    </div>
+                    <div class="flex   relative space-x-4">
+                        <div class="text-orange-400 text-6xl font-semibold mt-3">
+                            <svg class="fill-current" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                viewBox="0 0 24 24">
+                                <path d="M20.285 2l-11.285 11.567-5.286-5.011-3.714 3.716 9 8.728 15-15.285z" />
+                            </svg>
+                            <!-- <img src="./src/assets/healthy-food.svg" alt="food" style="width:140px"
+                                                                                                                                                                                                                                                                                    class="max-w-full max-h-full transform translate-y-4 -translate-x-8 " /> -->
+                        </div>
+
+                        <div class="flex-grow  ">
+                            <div class="font-semibold">Решить проблемы со здоровьем </div>
+                            <div><span class="italic font-semibold">Результат:</span> почувствуешь себя здоровой, полной
+                                сил и энергии.</div>
+                        </div>
+
+                    </div>
+                    <div class="flex mt-6 justify-center w-full">
+                        <Div class='w-1/3 border-b-4 border-dotted border-amber-400'></Div>
+                    </div>
+                    <div class="flex   relative space-x-4">
+                        <div class="text-orange-400 text-6xl font-semibold mt-3">
+                            <svg class="fill-current" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                viewBox="0 0 24 24">
+                                <path d="M20.285 2l-11.285 11.567-5.286-5.011-3.714 3.716 9 8.728 15-15.285z" />
+                            </svg>
+                            <!-- <img src="./src/assets/healthy-food.svg" alt="food" style="width:140px"
+                                                                                                                                                                                                                                                                                                                            class="max-w-full max-h-full transform translate-y-4 -translate-x-8 " /> -->
+                        </div>
+
+                        <div class="flex-grow  ">
+                            <div class="font-semibold">Сформировать правильное пищевое поведение </div>
+                            <div><span class="italic font-semibold">Результат:</span> перестанешь заедать стресс и
+                                избавишься от зависимости от еды.</div>
+                        </div>
+
+                    </div>
+                    <div class="flex mt-6 justify-center w-full">
+                        <Div class='w-1/3 border-b-4 border-dotted border-amber-400'></Div>
+                    </div>
+                    <div class="flex   relative space-x-4">
+                        <div class="text-orange-400 text-6xl font-semibold mt-3">
+                            <svg class="fill-current" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                viewBox="0 0 24 24">
+                                <path d="M20.285 2l-11.285 11.567-5.286-5.011-3.714 3.716 9 8.728 15-15.285z" />
+                            </svg>
+                            <!-- <img src="./src/assets/healthy-food.svg" alt="food" style="width:140px"
+                                                                                                                                                                                                                                                                                                                                                                    class="max-w-full max-h-full transform translate-y-4 -translate-x-8 " /> -->
+                        </div>
+
+                        <div class="flex-grow  ">
+                            <div class="font-semibold">Быть красивой </div>
+                            <div><span class="italic font-semibold">Результат:</span> будешь ловить на себе восхищенные
+                                мужские взгляды.</div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="flex justify-center mt-10">
+                    <button
+                        class=" py-2 px-4 text-2xl
+                                                                                    text-white 
+                                                                                    font-semibold 
+                                                                                    rounded-lg 
+                                                                                    shadow-btn 
+                                                                                    focus:outline-none 
+                                                                                    bg-orange-400  
+                                                                                    transition duration-300 ease-in-out">
+                        Записатсья на курс
+                    </button>
+                </div>
+            </div>
+            <div class="container py-4 px-6   opacity-0 transform translate-y-10 segment ">
+
+                <div class="text-lg font-semibold text-2xl  text-center mb-10">
+                    Что тебя ждет на курсе:
+                </div>
+
+                <!-- what your expect -->
+                <div class="space-y-10 px-6">
+                    <div class="space-y-2">
+                        <div class="text-4xl font-semibold">
+                            <span class="text-orange-400 terxt-6xl">
+                                4
+                            </span>
+                            недели
+                        </div>
+                        <div>
+                            плотной работы над собой включая тренировки уходовые процедуры, составления плана питания
                         </div>
                     </div>
-                    <div class="flex flex-wrap items-end">
-                        <div class="text-amber-400 text-6xl font-semibold">
-                            <img src="./src/assets/fitness.svg" alt="food" style="width:140px"
-                                class="max-w-full max-h-full transform translate-y-4 -translate-x-6 " />
+
+
+                    <!-- / -->
+                    <div class="space-y-2">
+                        <div class="text-4xl font-semibold">
+                            <span class="text-orange-400 terxt-6xl">
+                                8
+                            </span>
+                            модулей
                         </div>
-                        <div class="flex-grow flex items-center justify-center h-32">
-                            Описание шага
-                        </div>
-                        <div class="flex mt-6 justify-center w-full">
-                            <Div class='w-1/3 border-b-4 border-dotted border-amber-400'></Div>
+                        <div>
+                            пошаговая программа, которая поможет улучшить все процессы
                         </div>
                     </div>
-                    <div class="flex flex-wrap items-end">
-                        <div class="text-amber-400 text-6xl font-semibold">
-                            <img src="./src/assets/heartbeat.svg" alt="food" style="width:140px"
-                                class="max-w-full max-h-full transform translate-y-4 -translate-x-4 " />
+                    <!-- / -->
+                    <div class="space-y-2">
+                        <div class="text-4xl font-semibold">
+                            <span class="text-orange-400 terxt-6xl">
+                                4
+                            </span>
+                            разбора
                         </div>
-                        <div class="flex-grow flex items-center justify-center h-32">
-                            Описание шага
+                        <div>
+                            в прямом эфире автор курса лично проведет разборы по таким важным занятия как ...
                         </div>
-                        <div class="flex mt-6 justify-center w-full">
-                            <Div class='w-1/3 border-b-4 border-dotted border-amber-400'></Div>
+                    </div>
+                    <!-- / -->
+                    <div class="space-y-2">
+                        <div class="text-4xl font-semibold">
+                            <span class="text-orange-400 terxt-6xl">
+                                12
+                            </span>
+                            онлайн тренировок
                         </div>
+                        <div>
+                            доступ к которым сохранится на 24 часа
+                        </div>
+                    </div>
+                    <!-- / -->
+                    <div class="space-y-2">
+                        <div class="text-4xl font-semibold">
+                            <span class="text-orange-400 terxt-6xl">
+                                30
+                            </span>
+                            дней
+                        </div>
+                        <div>
+                            под присмотром опытного куратора
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="bg-gradient-to-tl from-gray-900  to-gray-400 text-white rounded-b-xl shadow-2xl">
+                <div class="container pt-4 pb-10 px-6   opacity-0 transform translate-y-10 segment space-y-4">
+                    <div class="text-lg font-semibold text-2xl  text-center mb-4 ">
+                        А также:
+                    </div>
+                    <div class="flex   relative space-x-4 ">
+                        <div class="text-orange-400 text-6xl font-semibold ">
+                            <svg class="fill-current" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                viewBox="0 0 24 24">
+                                <path d="M20.285 2l-11.285 11.567-5.286-5.011-3.714 3.716 9 8.728 15-15.285z" />
+                            </svg>
+                            <!-- <img src="./src/assets/healthy-food.svg" alt="food" style="width:140px"
+                                                                                                class="max-w-full max-h-full transform translate-y-4 -translate-x-8 " /> -->
+                        </div>
+
+                        <div class="flex-grow  ">
+                            <div>Конструктор меню</div>
+                        </div>
+
+                    </div>
+                    <!-- / -->
+                    <div class="flex   relative space-x-4">
+                        <div class="text-orange-400 text-6xl font-semibold ">
+                            <svg class="fill-current" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                viewBox="0 0 24 24">
+                                <path d="M20.285 2l-11.285 11.567-5.286-5.011-3.714 3.716 9 8.728 15-15.285z" />
+                            </svg>
+                            <!-- <img src="./src/assets/healthy-food.svg" alt="food" style="width:140px"
+                                                                                                                                        class="max-w-full max-h-full transform translate-y-4 -translate-x-8 " /> -->
+                        </div>
+
+                        <div class="flex-grow  ">
+                            <div> Антицеллюлитные видео методики массажа</div>
+                        </div>
+
+                    </div>
+                    <!-- / -->
+                    <div class="flex   relative space-x-4">
+                        <div class="text-orange-400 text-6xl font-semibold ">
+                            <svg class="fill-current" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                viewBox="0 0 24 24">
+                                <path d="M20.285 2l-11.285 11.567-5.286-5.011-3.714 3.716 9 8.728 15-15.285z" />
+                            </svg>
+                            <!-- <img src="./src/assets/healthy-food.svg" alt="food" style="width:140px"
+                                                                                                                                                            class="max-w-full max-h-full transform translate-y-4 -translate-x-8 " /> -->
+                        </div>
+
+                        <div class="flex-grow  ">
+                            <div> Уходовые процедуры</div>
+                        </div>
+
+                    </div>
+                    <!-- / -->
+                    <div class="flex   relative space-x-4">
+                        <div class="text-orange-400 text-6xl font-semibold ">
+                            <svg class="fill-current" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                viewBox="0 0 24 24">
+                                <path d="M20.285 2l-11.285 11.567-5.286-5.011-3.714 3.716 9 8.728 15-15.285z" />
+                            </svg>
+                            <!-- <img src="./src/assets/healthy-food.svg" alt="food" style="width:140px"
+                                                                                                                                                            class="max-w-full max-h-full transform translate-y-4 -translate-x-8 " /> -->
+                        </div>
+
+                        <div class="flex-grow  ">
+                            <div> Эфиры по энергии</div>
+                        </div>
+
+                    </div>
+                    <!-- / -->
+                    <div class="flex   relative space-x-4">
+                        <div class="text-orange-400 text-6xl font-semibold ">
+                            <svg class="fill-current" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                viewBox="0 0 24 24">
+                                <path d="M20.285 2l-11.285 11.567-5.286-5.011-3.714 3.716 9 8.728 15-15.285z" />
+                            </svg>
+                            <!-- <img src="./src/assets/healthy-food.svg" alt="food" style="width:140px"
+                                                                                                                                                            class="max-w-full max-h-full transform translate-y-4 -translate-x-8 " /> -->
+                        </div>
+
+                        <div class="flex-grow  ">
+                            <div> И тд</div>
+                        </div>
+
                     </div>
                 </div>
             </div>
 
-            <!-- Images -->
-            <div class="segment opacity-0 transform translate-y-10">
-                <div class="py-4 space-y-6">
-                    <div class="text-lg font-semibold text-2xl  text-center ">
-                        Фотки
-                    </div>
-                    <div class="flex justify-center px-2">
-                        <div
-                            class="overflow-hidden  shadow-2xl rounded-full py-14  w-full bg-gradient-to-tl from-emerald-400 to-teal-500 ">
-                            <div class="flex box-content justify-center items-center h-full ">
-                                <div id="slider" class="w-full">
+        </div>
 
-                                    <div class=" h-72 px-1 ">
-                                        <div class="flex w-full h-full items-center">
-                                            <div
-                                                class="transform scale-y-50 transition duration-300 w-full h-full rounded-lg bg-white shadow-md slide">
-                                            </div>
+        <!-- Images -->
+        <!-- <div class="segment opacity-0 transform translate-y-10">
+            <div class="py-4 space-y-6">
+                <div class="text-lg font-semibold text-2xl  text-center ">
+                    Фотки
+                </div>
+                <div class="flex justify-center px-2">
+                    <div
+                        class="overflow-hidden  shadow-2xl rounded-full py-14  w-full bg-gradient-to-tl from-gray-900  to-gray-400 ">
+                        <div class="flex box-content justify-center items-center h-full ">
+                            <div id="slider" class="w-full">
+
+                                <div class=" h-72 px-1 ">
+                                    <div class="flex w-full h-full items-center">
+                                        <div
+                                            class="transform scale-y-50 transition duration-300 w-full h-full rounded-lg bg-white shadow-md slide">
                                         </div>
                                     </div>
-                                    <div class="h-72 px-1 ">
-                                        <div class="flex w-full h-full items-center">
-                                            <div
-                                                class="transform scale-y-50 transition duration-300 w-full h-full rounded-lg bg-white shadow-md slide">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="h-72 px-1 ">
-                                        <div class="flex w-full h-full items-center">
-                                            <div
-                                                class="transform scale-y-50 transition duration-300 w-full h-full rounded-lg bg-white shadow-md slide">
-                                            </div>
-                                        </div>
-                                    </div>
-
-
                                 </div>
-                            </div>
+                                <div class="h-72 px-1 ">
+                                    <div class="flex w-full h-full items-center">
+                                        <div
+                                            class="transform scale-y-50 transition duration-300 w-full h-full rounded-lg bg-white shadow-md slide">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="h-72 px-1 ">
+                                    <div class="flex w-full h-full items-center">
+                                        <div
+                                            class="transform scale-y-50 transition duration-300 w-full h-full rounded-lg bg-white shadow-md slide">
+                                        </div>
+                                    </div>
+                                </div>
 
+
+                            </div>
                         </div>
+
                     </div>
-                    <div class=" flex justify-center">
-                        <button class=" py-2 px-4 text-2xl
+                </div>
+                <div class=" flex justify-center">
+                    <button class=" py-2 px-4 text-2xl
                                                                 text-white 
                                                                 font-semibold 
                                                                 rounded-lg 
-                                                                shadow-md 
+                                                                shadow-btn 
                                                                 focus:outline-none 
-                                                                bg-amber-400  
+                                                                bg-orange-400  
                                                                 transition duration-300 ease-in-out">
-                            Хочу также!
-                        </button>
-                    </div>
+                        Хочу также!
+                    </button>
                 </div>
             </div>
+        </div> -->
 
-            <!-- 
+        <!-- 
                  Отзывы
                  Форма
             -->
-            <div class="flex mt-6 justify-center w-full">
-                <Div class='w-1/3 border-b-4 border-dotted border-amber-400'></Div>
-            </div>
-            <!-- О себе -->
-            <div class="container py-4 px-6 space-y-10 opacity-0 transform translate-y-10 segment">
-                <div class="text-lg font-semibold text-2xl  text-center ">
-                    Обо мне
-                </div>
-                <div class="flex justify-center">
-                    <div class="bg-white rounded-lg h-64 w-64 shadow-lg">
-                    </div>
-                </div>
-                <div class="text-lg font-semibold text-2xl  text-center ">
-                    Меня зовут <span class="text-3xl text-amber-400 ">Оля!</span>
-                </div>
-                <div class="px-2 text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam aperiam
-                    eum nesciunt
-                    eaque, minima
-                    debitis rem sit fuga distinctio, sapiente esse, fugit corrupti at odit? Pariatur, voluptate! Itaque,
-                    ea fuga.</div>
-                <div class="px-2 text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam aperiam
-                    eum nesciunt
-                    eaque, minima
-                    debitis rem sit fuga distinctio, sapiente esse, fugit corrupti at odit? Pariatur, voluptate! Itaque,
-                    ea fuga.</div>
-            </div>
-            <div class="flex mt-6 justify-center w-full">
-                <Div class='w-1/3 border-b-4 border-dotted border-amber-400'></Div>
-            </div>
+        <div class="flex mt-6 justify-center w-full py-10">
+            <Div class='w-1/3 border-b-4 border-dotted border-orange-400'></Div>
+        </div>
 
+        <div class="container py-4 px-6 space-y-10 opacity-0 transform translate-y-10 segment">
+            <div class="text-lg font-semibold text-2xl  text-center ">
+                <span class="text-orange-400">Выбери</span>
+                подходящий тариф:
+            </div>
+            <div class="space-y-6">
+                <div class="shadow-2xl bg-gradient-to-tl from-gray-900  to-gray-400 text-white px-4 py-6 rounded-md ">
+                    <div class=" text-2xl font-semibold">
+                        Лайт
+                    </div>
+                    <ul class="list-inside list-disc">
+                        <li>Тело</li>
+                        <li>Самопознание</li>
+                        <li>Питание</li>
+                        <li>ОНлайн тренировки</li>
+                        <li>Мастер майнд по энергии</li>
+                        <li>Антицеллюлитные методики массажа</li>
+                        <li>Уходовые процедуры</li>
+                        <li>Участие в конурсе</li>
+                        <li class="text-gray-300 opacity-70">Общий куратор</li>
+                        <li class="text-gray-300 opacity-70">Личное присутсвие автора курса в чате</li>
+                        <li class="text-gray-300 opacity-70">Сессия с психологом</li>
+                        <li class="text-gray-300 opacity-70">Эфир от специалиста ?????????</li>
 
-            <!-- Отзывы -->
-            <div class="container py-4 px-6 space-y-10 opacity-0 transform translate-y-10 segment">
-                <div class="text-lg font-semibold text-2xl  text-center ">
-                    Отзывы
-                </div>
-                <div id="comments">
-                    <div class="px-2 pb-5 w-5/6">
-                        <div class="bg-white  rounded-lg  px-4   shadow-lg divide-y-2 divide-dashed divide-gray-300">
-                            <div class="flex space-x-5 items-center  py-4 ">
-                                <div class="w-12 h-12 rounded-full border-2 border-gray-300"></div>
-                                <div> Имя пользователя</div>
-                            </div>
-                            <div class="py-4">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem sapiente voluptates
-                                officiis dicta esse porro temporibus velit debitis ea expedita maiores culpa neque
-                                exercitationem dolorum, perferendis sunt delectus numquam inventore?
-                            </div>
+                    </ul>
+                    <div class="text-lg ">
+                        <div class="text-center line-through">
+                            1111 руб.
                         </div>
-                    </div>
-                    <div class="px-2 pb-5 w-5/6">
-                        <div class="bg-white  rounded-lg  px-4   shadow-lg divide-y-2 divide-dashed divide-gray-300">
-                            <div class="flex space-x-5 items-center  py-4 ">
-                                <div class="w-12 h-12 rounded-full border-2 border-gray-300"></div>
-                                <div> Имя пользователя</div>
-                            </div>
-                            <div class="py-4">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem sapiente voluptates
-                                officiis dicta esse porro temporibus velit debitis ea expedita maiores culpa neque
-                                exercitationem dolorum, perferendis sunt delectus numquam inventore?
-                            </div>
+                        <div class="text-center line-through">
+                            2222 руб.
                         </div>
-                    </div>
-                    <div class="px-2 pb-5 w-5/6">
-                        <div class="bg-white  rounded-lg  px-4   shadow-lg divide-y-2 divide-dashed divide-gray-300">
-                            <div class="flex space-x-5 items-center  py-4 ">
-                                <div class="w-12 h-12 rounded-full border-2 border-gray-300"></div>
-                                <div> Имя пользователя</div>
-                            </div>
-                            <div class="py-4">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem sapiente voluptates
-                                officiis dicta esse porro temporibus velit debitis ea expedita maiores culpa neque
-                                exercitationem dolorum, perferendis sunt delectus numquam inventore?
-                            </div>
+                        <div class="text-3xl font-semibold text-orange-400 text-center">
+                            3499 руб.
+                        </div>
+                        <div class="flex justify-center mt-4">
+                            <button id="pay-form-submit"
+                                class="py-2 px-4
+                                                                                            text-2xl
+                                                                                            text-white 
+                                                                                            font-semibold 
+                                                                                            rounded-lg 
+                                                                                            shadow-btn 
+                                                                                            focus:outline-none 
+                                                                                            bg-orange-400  
+                                                                                            w-2/4
+                                                                                            transition duration-300 ease-in-out">
+                                Buy
+                            </button>
                         </div>
                     </div>
 
+                </div>
+                <div class="shadow-2xl bg-gradient-to-tl from-gray-900  to-gray-400 text-white px-4 py-6 rounded-md">
+                    <div class=" text-2xl font-semibold">
+                        Лайт
+                    </div>
+                    <ul class="list-inside list-disc">
+                        <li>Тело</li>
+                        <li>Самопознание</li>
+                        <li>Питание</li>
+                        <li>ОНлайн тренировки</li>
+                        <li>Мастер майнд по энергии</li>
+                        <li>Антицеллюлитные методики массажа</li>
+                        <li>Уходовые процедуры</li>
+                        <li>Участие в конурсе</li>
+                        <li class="text-gray-300 opacity-70">Общий куратор</li>
+                        <li class="text-gray-300 opacity-70">Личное присутсвие автора курса в чате</li>
+                        <li class="text-gray-300 opacity-70">Сессия с психологом</li>
+                        <li class="text-gray-300 opacity-70">Эфир от специалиста ?????????</li>
 
+                    </ul>
+                    <div class="text-lg ">
+                        <div class="text-center line-through">
+                            1111 руб.
+                        </div>
+                        <div class="text-center line-through">
+                            2222 руб.
+                        </div>
+                        <div class="text-3xl font-semibold text-orange-400 text-center">
+                            3499 руб.
+                        </div>
+                        <div class="flex justify-center mt-4">
+                            <button id="pay-form-submit"
+                                class="py-2 px-4
+                                                                                                            text-2xl
+                                                                                                            text-white 
+                                                                                                            font-semibold 
+                                                                                                            rounded-lg 
+                                                                                                            shadow-btn 
+                                                                                                            focus:outline-none 
+                                                                                                            bg-orange-400  
+                                                                                                            w-2/4
+                                                                                                            transition duration-300 ease-in-out">
+                                Buy
+                            </button>
+                        </div>
+                    </div>
 
                 </div>
-            </div>
+                <div class="shadow-2xl bg-gradient-to-tl from-gray-900  to-gray-400 text-white px-4 py-6 rounded-md">
+                    <div class=" text-2xl font-semibold">
+                        Лайт
+                    </div>
+                    <ul class="list-inside list-disc">
+                        <li>Тело</li>
+                        <li>Самопознание</li>
+                        <li>Питание</li>
+                        <li>ОНлайн тренировки</li>
+                        <li>Мастер майнд по энергии</li>
+                        <li>Антицеллюлитные методики массажа</li>
+                        <li>Уходовые процедуры</li>
+                        <li>Участие в конурсе</li>
+                        <li class="text-gray-300 opacity-70">Общий куратор</li>
+                        <li class="text-gray-300 opacity-70">Личное присутсвие автора курса в чате</li>
+                        <li class="text-gray-300 opacity-70">Сессия с психологом</li>
+                        <li class="text-gray-300 opacity-70">Эфир от специалиста ?????????</li>
 
-            <div class="bg-gradient-to-bl from-emerald-400 to-teal-500 py-12 px-6">
-                <!-- form -->
-                <div class="bg-white rounded-lg  shadow-lg  px-4 py-4 opacity-0 transform translate-y-10 segment">
-                    <form id="pay-form" class="space-y-8" action='https://auth.robokassa.ru/Merchant/Index.aspx'
-                        method=POST>
-                        <div class="text-2xl text-center"> Приобрести что-то</div>
-                        <div class="w-full relative input-group">
-                            <input
-                                class="border border-gray-200 px-2 py-2 w-full rounded-md transition duration-300 focus:outline-none focus:ring-2 ring-teal-200"
-                                type="tel" name="phone" placeholder="Номер телефона" />
-
-                            <div class="error px-2 absolute overflow-hidden ">
-                                <div class="transition duration-300 transform -translate-y-10 text-red-700 ">Необходимо
-                                    заполнить поле</div>
-                            </div>
+                    </ul>
+                    <div class="text-lg ">
+                        <div class="text-center line-through">
+                            1111 руб.
                         </div>
-                        <div class="w-full relative">
-                            <input
-                                class="nickname border border-gray-200 px-2 py-2 w-full rounded-md transition duration-300 focus:outline-none focus:ring-2 ring-teal-200"
-                                type="text" name="nickname" placeholder="Ник в instagram" />
-
-                            <div class="error px-2 absolute overflow-hidden ">
-                                <div class="transition duration-300 transform -translate-y-10 text-red-700 ">Необходимо
-                                    заполнить поле</div>
-                            </div>
+                        <div class="text-center line-through">
+                            2222 руб.
                         </div>
-                        <!-- Hidden inputs -->
-                        <input type=hidden name=MerchantLogin>
-                        <input type=hidden name=OutSum>
-                        <input type=hidden name=Description>
-                        <input type=hidden name=SignatureValue>
-                        <div class="flex justify-center  ">
+                        <div class="text-3xl font-semibold text-orange-400 text-center">
+                            3499 руб.
+                        </div>
+                        <div class="flex justify-center mt-4">
                             <button id="pay-form-submit" class="py-2 px-4
+                                      text-2xl
+                                      text-white 
+                                      font-semibold 
+                                      rounded-lg 
+                                      shadow-btn 
+                                      focus:outline-none 
+                                      bg-orange-400  
+                                      w-2/4
+                                      transition duration-300 
+                                      ease-in-out">
+                                Buy
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="flex mt-6 justify-center w-full py-10">
+            <Div class='w-1/3 border-b-4 border-dotted border-orange-400'></Div>
+        </div>
+        <!-- О себе -->
+        <div class="container py-4 px-6 space-y-10 opacity-0 transform translate-y-10 segment">
+            <div class="text-lg font-semibold text-2xl  text-center ">
+                Об авторе курса
+            </div>
+            <div class="flex justify-center">
+                <div class="bg-white rounded-lg  shadow-lg overflow-hidden">
+                    <img src="./src/assets/autor.jpg" class="h-64 " alt="автор">
+                </div>
+            </div>
+            <div class="text-lg font-semibold text-2xl  text-center ">
+                Меня зовут <span class="text-3xl text-orange-400 ">Оля!</span>
+            </div>
+            <div class="px-2 text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam aperiam
+                eum nesciunt
+                eaque, minima
+                debitis rem sit fuga distinctio, sapiente esse, fugit corrupti at odit? Pariatur, voluptate! Itaque,
+                ea fuga.</div>
+            <div class="px-2 text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam aperiam
+                eum nesciunt
+                eaque, minima
+                debitis rem sit fuga distinctio, sapiente esse, fugit corrupti at odit? Pariatur, voluptate! Itaque,
+                ea fuga.</div>
+        </div>
+        <div class="flex mt-6 justify-center w-full py-10">
+            <Div class='w-1/3 border-b-4 border-dotted border-orange-400'></Div>
+        </div>
+
+        <!-- Отзывы -->
+        <div class="container py-4 px-6 space-y-10 opacity-0 transform translate-y-10 segment">
+            <div class="text-lg font-semibold text-2xl  text-center ">
+                Отзывы и результаты
+            </div>
+            <div id="comments">
+
+                <div class="px-2 pb-5 w-5/6">
+                    <div class="bg-white  rounded-lg  px-4 py-2  shadow-lg divide-y-2 divide-dashed divide-gray-300">
+
+                        <img src="./src/assets/feedback/1.jpg" alt="">
+
+
+
+
+                    </div>
+                </div>
+                <div class="px-2 pb-5 w-5/6">
+                    <div class="bg-white  rounded-lg  px-4 py-2  shadow-lg divide-y-2 divide-dashed divide-gray-300">
+                        <img src="./src/assets/feedback/2.jpg" alt="">
+                    </div>
+                </div>
+
+
+
+            </div>
+        </div>
+
+        <div class="bg-gradient-to-bl from-gray-900  to-gray-400 py-12 px-6">
+            <!-- form -->
+            <div class="bg-white rounded-lg  shadow-lg  px-4 py-4 opacity-0 transform translate-y-10 segment">
+                <form id="pay-form" class="space-y-8" action='https://auth.robokassa.ru/Merchant/Index.aspx'
+                    method=POST>
+                    <div class="text-2xl text-center"> Приобрести что-то</div>
+                    <div class="w-full relative input-group">
+                        <input
+                            class="border border-gray-200 px-2 py-2 w-full rounded-md transition duration-300 focus:outline-none focus:ring-2 ring-teal-200"
+                            type="tel" name="phone" placeholder="Номер телефона" />
+
+                        <div class="error px-2 absolute overflow-hidden ">
+                            <div class="transition duration-300 transform -translate-y-10 text-red-700 ">Необходимо
+                                заполнить поле</div>
+                        </div>
+                    </div>
+                    <div class="w-full relative">
+                        <input
+                            class="nickname border border-gray-200 px-2 py-2 w-full rounded-md transition duration-300 focus:outline-none focus:ring-2 ring-teal-200"
+                            type="text" name="nickname" placeholder="Ник в instagram" />
+
+                        <div class="error px-2 absolute overflow-hidden ">
+                            <div class="transition duration-300 transform -translate-y-10 text-red-700 ">Необходимо
+                                заполнить поле</div>
+                        </div>
+                    </div>
+                    <!-- Hidden inputs -->
+                    <input type=hidden name=MerchantLogin>
+                    <input type=hidden name=OutSum>
+                    <input type=hidden name=Description>
+                    <input type=hidden name=SignatureValue>
+                    <div class="flex justify-center  ">
+                        <button id="pay-form-submit" class="py-2 px-4
                                             text-2xl
                                             text-white 
                                             font-semibold 
                                             rounded-lg 
-                                            shadow-md 
+                                            shadow-btn 
                                             focus:outline-none 
-                                            bg-amber-400  
+                                            bg-orange-400  
                                             w-2/4
                                             transition duration-300 ease-in-out">
-                                Buy
-                            </button>
-                        </div>
-                    </form>
-                </div>
-                <!-- -->
-
+                            Buy
+                        </button>
+                    </div>
+                </form>
             </div>
-
+            <!-- -->
 
         </div>
+
+
+    </div>
 
     </div>
 
@@ -313,13 +792,13 @@
 
     <!-- Modal -->
     <div id="modal-wrapper"
-        class=" opacity-0 bg-gray-600 bg-opacity-60 fixed top-0 left-0 w-screen h-screen   flex items-center justify-center"
+        class="px-6 opacity-0 bg-gray-600 bg-opacity-60 fixed top-0 left-0 w-screen h-screen   flex items-center justify-center"
         style="z-index:-100">
         <div id="modal"
-            class="min-w-3/4 rounded-lg bg-white shadow-lg  py-4 px-4 transition  duration-300 transform scale-0 ">
+            class="min-w-3/4 max-w-3/4 rounded-lg bg-white shadow-lg  py-4 px-4 transition  duration-300 transform scale-0 ">
             <div class="flex items-center loader hidden">
                 <div class="mr-4">
-                    <svg class="animate-spin -ml-1 mr-3 h-5 w-5 fill-current text-amber-400"
+                    <svg class="animate-spin -ml-1 mr-3 h-5 w-5 fill-current text-orange-400"
                         xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
                         <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4">
                         </circle>
@@ -331,21 +810,43 @@
                 <div class="flex-grow">Подождите...</div>
             </div>
             <div class="text-2xl text-center hidden successDialog">
-                Спасибо за покупку!
+                <div class="modal-text"> Спасибо за покупку! </div>
                 <div class="py-6">
                     <button class=" py-2 px-4
-                                    text-дп
+                                    
                                      text-white 
                                      font-semibold 
                                      rounded-lg 
                                      shadow-md 
                                      focus:outline-none 
-                                     bg-amber-400  
+                                     bg-orange-400  
                                      transition duration-300 ease-in-out
                                      get-result
                                      
                                                 ">
                         Получить гайд
+                    </button>
+                    <!-- ВЫнести в PHP и обрабатывать наличие на сервере -->
+                    <a href="./guide.pdf" download class="hidden get-result-link">123123</a>
+                </div>
+            </div>
+            <div class="text-2xl text-center hidden errorDialog">
+                <div class="modal-text"> Что-то пошло не так =( <br> Повторите попытку позже</div>
+                <div class="py-6">
+                    <button class=" py-2 px-4
+                                                min-w-3/4
+                                                errorBtn
+                                                 text-white 
+                                                 font-semibold 
+                                                 rounded-lg 
+                                                 shadow-md 
+                                                 focus:outline-none 
+                                                 bg-orange-400  
+                                                 transition duration-300 ease-in-out
+                                                 
+                                                 
+                                                            ">
+                        Ок
                     </button>
                     <!-- ВЫнести в PHP и обрабатывать наличие на сервере -->
                     <a href="./guide.pdf" download class="hidden get-result-link">123123</a>

@@ -12,6 +12,7 @@ import { appear } from './js/appear'
 $(document).ready(() => {
   $('#slider').slick({
     centerMode: true,
+
     slidesToShow: 1,
     arrows: false,
     autoplay: true,
@@ -19,6 +20,7 @@ $(document).ready(() => {
   })
   $('#comments').slick({
     centerMode: false,
+    adaptiveHeight: false,
     responsive: true,
     slidesToShow: 1,
     arrows: false,
