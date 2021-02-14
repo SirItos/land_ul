@@ -15,6 +15,10 @@
 body {
   scroll-behavior: smooth;
 }
+.start-screen {
+  height: 100vh; /* Fallback for browsers that do not support Custom Properties */
+  height: calc(var(--vh, 1vh) * 100);
+}
 
 .slick-active .slide {
   transform: scaleY(1) !important;

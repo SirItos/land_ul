@@ -10,14 +10,14 @@
 </head>
 
 <body class=" bg-white font-sf box-border">
-    <div class="h-screen">
+    <div class="start-screen">
         <!-- Header -->
         <div class="shadow-2xl  rounded-b-xl  h-5/6  bg-gradient-to-tl from-gray-900  to-gray-400  text-white ">
             <div class="container h-full mx-auto py-6">
 
                 <div class="text-2xl h-full font-semibold flex flex-col space-y-5 justify-center ">
                     <div class=" flex-grow w-full min-h-0 ">
-                        <div class="h-full w-full flex justify-center">
+                        <div class="h-full w-full flex flex-wrap justify-center">
                             <div
                                 class="opacity-0 overflow-hidden transform translate-y-10 segment rounded-full shadow-lg border-white border-8 w-60 h-60">
                                 <div>
@@ -25,10 +25,15 @@
                                         style="transform:translate(5px,-25px) scale(1.1)">
                                 </div>
                             </div>
+                            <div class="opacity-0 transform translate-y-10 segment px-12">
+                                <div class="w-full text-center text-lg opacity-90 ">
+                                    Почувствуй легкость, увереность в себе, свою привлекательность
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="flex-3 px-12 text-center opacity-0 transform translate-y-10 segment " data-delay="150">
-                        <div>Название курса или еще что</div>
+                        <div class="text-orange-400">Название курса </div>
                         <div class="text-center text-lg opacity-90">Старт 1 марта</div>
                     </div>
 
@@ -42,7 +47,7 @@
                             focus:outline-none 
                             bg-orange-400  
                             transition duration-300 ease-in-out">
-                            Записатсья на курс
+                            Записаться на курс
                         </button>
                     </div>
                 </div>
@@ -56,8 +61,8 @@
             <div class='flex font-semibold opacity-50 flex-wrap justify-center'>
                 Узнать больше!
             </div>
-            <div class="flex justify-center">
-                <svg class="text-2xl animate-bounce fill-current opacity-50" xmlns="http://www.w3.org/2000/svg"
+            <div class="flex justify-center text-orange-400">
+                <svg class="text-2xl animate-bounce fill-current " xmlns="http://www.w3.org/2000/svg"
                     xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="1em"
                     height="1em"
                     style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);"
@@ -294,7 +299,7 @@
                                                                                     focus:outline-none 
                                                                                     bg-orange-400  
                                                                                     transition duration-300 ease-in-out">
-                        Записатсья на курс
+                        Записаться на курс
                     </button>
                 </div>
             </div>
@@ -736,7 +741,7 @@
             <div class="bg-white rounded-lg  shadow-lg  px-4 py-4 opacity-0 transform translate-y-10 segment">
                 <form id="pay-form" class="space-y-8" action='https://auth.robokassa.ru/Merchant/Index.aspx'
                     method=POST>
-                    <div class="text-2xl text-center"> Приобрести что-то</div>
+                    <div class="text-2xl text-center"> Забронировать свое место</div>
                     <div class="w-full relative input-group">
                         <input
                             class="border border-gray-200 px-2 py-2 w-full rounded-md transition duration-300 focus:outline-none focus:ring-2 ring-teal-200"
