@@ -25,9 +25,10 @@ class DbWorker  {
 
   public function addCustomer(array $data) {
       try {
-        $query = $this->connection->prepare("INSERT INTO Customers (nickname, phone) VALUES (:nickname, :phone)");
+        $query = $this->connection->prepare("INSERT INTO Customers (nickname, phone, tariff) VALUES (:nickname, :phone,:tariff)");
         $query->bindParam(':nickname',$data['nickname']);
         $query->bindParam(':phone',$data['phone']);
+        $query->bindParam(':tariff',$data['tariff']);
         $query->execute();
         return json_encode(['id'=>$this->connection->lastInsertId(),'status'=>true]);
       } catch (PDOException $e) {

@@ -1,7 +1,9 @@
 import $ from 'jquery'
-
+import { submitEvent } from './forma'
+import { formRender } from './formRender'
 const wrapper = $('#modal-wrapper')
 const modal = $('#modal')
+const modalForm = $('#modalForm')
 const state = {
   loader: false
 }
@@ -21,7 +23,12 @@ export const initModal = () => {
   })
   $(document).mouseup(function (e) {
     if (state.loader) return
-    if (!modal.is(e.target) && modal.has(e.target).length === 0) {
+    if (
+      !modal.is(e.target) &&
+      modal.has(e.target).length === 0 &&
+      !modalForm.is(e.target) &&
+      modalForm.has(e.target).length === 0
+    ) {
       hideModal()
     }
   })
@@ -46,6 +53,13 @@ const modalPlane = () => {
     $('body').removeClass('overflow-hidden')
   }
 }
+/**
+ * Отображение врапера для модальных окон
+ */
+const showWrapper = () => {
+  wrapper.removeClass('opacity-0').addClass('opacity-100')
+  wrapper.css('z-index', '100')
+}
 
 /**
  * Отображение модального окна.
@@ -55,6 +69,7 @@ const modalPlane = () => {
  */
 export const showModal = ({ error = false, loader = false }) => {
   state.loader = loader
+  hideModal(false)
   const targetDialog = error ? '.errorDialog' : '.successDialog'
   if (loader) {
     $('.loader').removeClass('hidden')
@@ -64,18 +79,53 @@ export const showModal = ({ error = false, loader = false }) => {
     $('.loader').addClass('hidden')
     $(targetDialog).removeClass('hidden')
   }
-  wrapper.removeClass('opacity-0').addClass('opacity-100')
-  wrapper.css('z-index', '100')
+  showWrapper()
+  modal.removeClass('hidden')
   modal.removeClass('scale-0').addClass('scale-100')
+}
+
+/**
+ * Отображение модальной формы
+ * @param {string} source
+ * @returns void
+ */
+export const showModalForm = (source) => {
+  const tariff = {
+    light: 3499,
+    medium: 4999,
+    hardcore: 5999
+  }
+
+  hideModal(true)
+  modalForm.removeClass('hidden')
+  formRender({ target: '#modalForm', noBinding: true })
+
+  modalForm.find('button').click((event) => {
+    submitEvent(event, '#modalForm')
+  })
+  modalForm.removeClass('scale-0').addClass('scale-100')
+  setTariff(tariff[source.dataset.tariff])
+  showWrapper()
+}
+
+const setTariff = (tariff) => {
+  modalForm.find('select').addClass('hidden').val(tariff)
+  console.log(modalForm.find('select'))
+  console.log(modalForm.find('select').val())
 }
 
 /**
  * Скрыть модальное окноа
  * @returns void
  */
-export const hideModal = () => {
+export const hideModal = (destroy = true) => {
   wrapper.removeClass('opacity-100').addClass('opacity-0')
-  modal.removeClass('scale-100').addClass('scale-0')
+  modal.removeClass('scale-100').addClass('scale-0').addClass('hidden')
+  modalForm.removeClass('scale-100').addClass('scale-0, hidden')
+  if (modalForm.find('.form') && destroy) {
+    modalForm.find('button').off('click', '**')
+    modalForm.find('.form').remove()
+  }
 }
 
 /**

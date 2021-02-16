@@ -2,7 +2,7 @@ import $ from 'jquery'
 
 export const resetvalidationOnInput = (inputs) => {
   for (let input in inputs) {
-    inputs[input].target.on('input', function () {
+    $(inputs[input].target).on('input', function () {
       const errorDiv = $(this).parent().find('.error div')
 
       if (errorDiv.hasClass('-translate-y-10')) return
@@ -33,7 +33,7 @@ export const validation = (state, target, rules) => {
         .find('input')
         .removeClass('ring-teal-200')
         .addClass('ring-red-200')
-      $(target).find('input').focus()
+      // $(target).find('input').focus()
 
       status = false
 

@@ -6,8 +6,10 @@ import 'slick-carousel/slick/slick.css'
 import $ from 'jquery'
 import 'slick-carousel'
 import { initModal } from './js/modal'
-import { initForm, sccrollToForm } from './js/forma'
+import { formRender } from './js/formRender'
 import { appear } from './js/appear'
+import { scrollToTarget } from './js/scrolling'
+import { showModalForm } from './js/modal'
 
 $(document).ready(() => {
   $('#slider').slick({
@@ -38,9 +40,16 @@ $(document).ready(() => {
   })
 
   initModal()
-  sccrollToForm()
   appear()
-  initForm()
+  ViewportHeight()
+  formRender({ target: '#form' })
+  $('.scrollToTariff').click(() => {
+    scrollToTarget('#tarrifs')
+  })
+
+  $('.buy_btn').click((event) => {
+    showModalForm(event.target)
+  })
 })
 
 const ViewportHeight = () => {

@@ -1,13 +1,21 @@
 import $ from 'jquery'
 import 'jquery-mask-plugin'
-import { scrollToTarget } from './scrolling'
+
 import { resetvalidationOnInput, validation } from './validation'
 import { sendRequest } from './api'
 import { hideModal, showModal } from './modal'
 
 const inputs = {
+  tariff: {
+    target: '.tariff',
+    rules: [
+      (val) => {
+        return !!val || 'Необходимо выбрать тариф'
+      }
+    ]
+  },
   phone: {
-    target: $('input[type="tel"]'),
+    target: 'input[type="tel"]',
     rules: [
       (val) => {
         return !!val
@@ -20,7 +28,7 @@ const inputs = {
     ]
   },
   nickname: {
-    target: $('.nickname'),
+    target: '.nickname',
     rules: [
       (val) => {
         return !!val
@@ -29,15 +37,22 @@ const inputs = {
   }
 }
 let withPrevent = true
-export const initForm = () => {
+
+export const initForm = (noBinding = false) => {
   initFormMask()
   resetvalidationOnInput(inputs)
-  $('#pay-form-submit').click((event) => {
-    if (withPrevent) {
-      event.preventDefault()
-      submitForm(inputs)
-    }
-  })
+  if (!noBinding) {
+    $('#form .pay-form-submit').click((event) => {
+      submitEvent(event)
+    })
+  }
+}
+
+export const submitEvent = (event, parent = '#form') => {
+  if (withPrevent) {
+    event.preventDefault()
+    submitForm(inputs, parent)
+  }
 }
 
 const initFormMask = () => {
@@ -50,30 +65,24 @@ const clearForm = () => {
   }
 }
 
-export const sccrollToForm = () => {
-  $('button:not(.get-result), button:not(.errorBtn)').click(() => {
-    scrollToTarget('#pay-form')
-  })
-}
-
-const submitForm = async (inputs) => {
+const submitForm = async (inputs, parent) => {
   const payload = {
+    tariff: null,
     phone: null,
     nickname: null
   }
+
   let valid = true
   for (let input in inputs) {
-    if (
-      !validation(
-        $(inputs[input].target).val(),
-        $(inputs[input].target).parent(),
-        inputs[input].rules
-      )
-    ) {
+    const target = $(parent).find(inputs[input].target)
+    console.log($(target))
+    console.log($(target).val())
+    if (!target) return
+    if (!validation($(target).val(), $(target).parent(), inputs[input].rules)) {
       valid = false
       break
     }
-    payload[input] = $(inputs[input].target).val()
+    payload[input] = $(target).val()
   }
   if (!valid) return
 
@@ -86,9 +95,13 @@ const submitForm = async (inputs) => {
         return
       }
       clearForm()
+      if (!withPrevent) {
+        hideModal()
+        return
+      }
+
       withPrevent = false
-      $('#pay-form-submit').click()
-      hideModal()
+      $(parent).find('.pay-form-submit').click()
     },
     () => {
       clearForm()
@@ -99,5 +112,3 @@ const submitForm = async (inputs) => {
     }
   )
 }
-
-const setInputVal = () => {}
