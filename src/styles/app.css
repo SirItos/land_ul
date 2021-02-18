@@ -23,3 +23,8 @@ body {
 .slick-active .slide {
   transform: scaleY(1) !important;
 }
+
+li::marker {
+  color: #fb923c;
+  font-size: 20px;
+}
