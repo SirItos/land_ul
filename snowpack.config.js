@@ -3,10 +3,12 @@
 
 /** @type {import("snowpack").SnowpackUserConfig } */
 module.exports = {
+  purge: ['./*.html', './src/*.js', './src/**/*.css', './src/**/*.js'],
   mount: {
     /* ... */
   },
   exclude: [
+    '**/.git/**/*',
     '**/node_modules/**/*',
     '**/.prettierrc',
     '**/package-lock.json',

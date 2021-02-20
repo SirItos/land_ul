@@ -24,7 +24,6 @@ export const appear = () => {
 }
 
 const showThatIsAboveBelow = (elem) => {
-  console.log()
   if (checkVisible(elem, 0, 'above') || checkVisible(elem)) {
     appearElement(elem)
   }

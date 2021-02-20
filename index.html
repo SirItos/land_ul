@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SnowPackDev</title>
+    <title>Olyakukuts</title>
 </head>
 
 <body class=" bg-white font-sf box-border">
@@ -73,7 +73,6 @@
             </div>
 
         </div>
-
         <!-- Learn more -->
         <div class=" container mx-auto space-y-2 pt-6 h-1/6 opacity-0 transform translate-y-10 segment learn-more flex flex-col justify-center"
             data-delay="700">
@@ -530,8 +529,9 @@
                             </div>
                         </div>
                         <div class="flex justify-center mt-4 px-2">
-                            <button id="pay-form-submit" data-tariff="light" class="py-2 px-4
+                            <button data-tariff="light" class="py-2 px-4
                                     buy_btn
+                                    pay-form-submit
                                     text-2xl
                                     text-white 
                                     font-semibold 
@@ -631,7 +631,8 @@
                             </div>
                         </div>
                         <div class="flex justify-center mt-4 px-2">
-                            <button id="pay-form-submit" data-tariff="light" class="py-2 px-4
+                            <button data-tariff="medium" class="py-2 px-4
+                                    pay-form-submit
                                     buy_btn
                                     text-2xl
                                     text-white 
@@ -733,7 +734,8 @@
                             </div>
                         </div>
                         <div class="flex justify-center mt-4 px-2">
-                            <button id="pay-form-submit" data-tariff="light" class="py-2 px-4
+                            <button data-tariff="hardcore" class="py-2 px-4
+                                    pay-form-submit
                                     buy_btn
                                     text-2xl
                                     text-white 
@@ -818,22 +820,79 @@
             <div id="form" class="opacity-0 transform translate-y-10 segment    ">
 
             </div>
+
+            <!-- footer -->
+            <div class="mt-10 text-white opacity-0 transform translate-y-10 segment">
+                <div class="text-xs">
+                    <div>
+                        Заказ считается оформленным с момента подтверждения оплаты.
+                    </div>
+                    <div>
+                        Оплата производится единовременно в 100% объеме без рассрочки.
+                    </div>
+                    <div>
+                        Сроки исполнения заказа c 1 по 31 марта 2021 года.
+                    </div>
+                    <div>
+                        После оформления заказа, вся необходимая информация будет отправлена на эл.почту, указанную при
+                        оформление заказа
+                    </div>
+                    <div>
+                        Возврат средств осуществляется по письменному заявлению заказчика в течение 14 дней.
+                    </div>
+                </div>
+
+                <!-- Контакты -->
+                <div class="mt-8 space-y-2">
+                    <a class="flex" type="tel" href="tel:+79216371712">
+                        <svg class="text-white fill-current mr-2" xmlns="http://www.w3.org/2000/svg" width="24"
+                            height="24" viewBox="0 0 24 24">
+                            <path
+                                d="M19 2c0-1.104-.896-2-2-2h-10c-1.104 0-2 .896-2 2v20c0 1.104.896 2 2 2h10c1.104 0 2-.896 2-2v-20zm-8.5 0h3c.276 0 .5.224.5.5s-.224.5-.5.5h-3c-.276 0-.5-.224-.5-.5s.224-.5.5-.5zm1.5 20c-.553 0-1-.448-1-1s.447-1 1-1c.552 0 .999.448.999 1s-.447 1-.999 1zm5-3h-10v-14.024h10v14.024z" />
+                        </svg>
+                        <div>+7 (921) 637-1712</div>
+                    </a>
+
+                    <a class="flex" href="mailto:mixlo95@mail.ru?subject=%D0%9A%D1%83%D1%80%D1%81">
+                        <svg class="text-white fill-current mr-2" xmlns="http://www.w3.org/2000/svg" width="24"
+                            height="24" viewBox="0 0 24 24">
+                            <path
+                                d="M12.042 23.648c-7.813 0-12.042-4.876-12.042-11.171 0-6.727 4.762-12.125 13.276-12.125 6.214 0 10.724 4.038 10.724 9.601 0 8.712-10.33 11.012-9.812 6.042-.71 1.108-1.854 2.354-4.053 2.354-2.516 0-4.08-1.842-4.08-4.807 0-4.444 2.921-8.199 6.379-8.199 1.659 0 2.8.876 3.277 2.221l.464-1.632h2.338c-.244.832-2.321 8.527-2.321 8.527-.648 2.666 1.35 2.713 3.122 1.297 3.329-2.58 3.501-9.327-.998-12.141-4.821-2.891-15.795-1.102-15.795 8.693 0 5.611 3.95 9.381 9.829 9.381 3.436 0 5.542-.93 7.295-1.948l1.177 1.698c-1.711.966-4.461 2.209-8.78 2.209zm-2.344-14.305c-.715 1.34-1.177 3.076-1.177 4.424 0 3.61 3.522 3.633 5.252.239.712-1.394 1.171-3.171 1.171-4.529 0-2.917-3.495-3.434-5.246-.134z" />
+                        </svg>
+                        <div>mixlo95@mail.ru</div>
+                    </a>
+                    <a class="flex" href="#">
+                        <svg class="text-white fill-current mr-2" xmlns="http://www.w3.org/2000/svg" width="24"
+                            height="24" viewBox="0 0 24 24">
+                            <path
+                                d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                        </svg>
+                        <div>@Olykukut</div>
+                    </a>
+                </div>
+            </div>
         </div>
-        <!-- -->
+        <!-- hidden Form -->
+        <form id="pay-form-hidden" action='https://auth.robokassa.ru/Merchant/Index.aspx' method=POST>
+            <input type="hidden" name="MerchantLogin" value="Olya_Kukuts">
+            <input type="hidden" name="OutSum" id="summ">
+            <input type="hidden" name="InvId" id="order_id">
+            <input type="hidden" name="Description" value='Покупка курса'>
+            <input type="hidden" name="SignatureValue" id="sign">
+            <input type="hidden" name="Eamil" id="payEmail">
+            <input type="hidden" name="Pass1" value="tsB1Aq2wxG1WPqsT2b0B">
+        </form>
 
     </div>
-
-
     </div>
     </div>
-
     <!-- Modal -->
     <div id="modal-wrapper"
         class="px-6 opacity-0 bg-gray-600 bg-opacity-60 fixed top-0 left-0 w-screen h-screen   flex items-center justify-center"
         style="z-index:-100">
         <div id="modal"
             class="min-w-3/4 max-w-3/4 rounded-lg bg-white shadow-lg  py-4 px-4 transition  duration-300 transform scale-0 ">
-            <div class="flex items-center loader hidden">
+            <div class=" items-center loader hidden">
                 <div class="mr-4">
                     <svg class="animate-spin -ml-1 mr-3 h-5 w-5 fill-current text-orange-400"
                         xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
@@ -847,7 +906,9 @@
                 <div class="flex-grow">Подождите...</div>
             </div>
             <div class="text-2xl text-center hidden successDialog">
-                <div class="modal-text"> Спасибо за покупку! </div>
+                <div class="modal-text"> Спасибо за покупку! <br>
+                    Вся информация придет вам на почту.
+                </div>
                 <div class="py-6">
                     <button class=" py-2 px-4
                                     
@@ -859,9 +920,9 @@
                                      bg-orange-400  
                                      transition duration-300 ease-in-out
                                      get-result
-                                     
-                                                ">
-                        Получить гайд
+                                     w-full
+  ">
+                        Ок
                     </button>
                     <!-- ВЫнести в PHP и обрабатывать наличие на сервере -->
                     <a href="./guide.pdf" download class="hidden get-result-link">123123</a>
@@ -880,9 +941,7 @@
                                                  focus:outline-none 
                                                  bg-orange-400  
                                                  transition duration-300 ease-in-out
-                                                 
-                                                 
-                                                            ">
+                                 ">
                         Ок
                     </button>
                     <!-- ВЫнести в PHP и обрабатывать наличие на сервере -->
@@ -895,8 +954,12 @@
             class="min-w-3/4 max-w-3/4 rounded-lg bg-white shadow-lg  py-4 px-4 transition  duration-300 transform scale-0 ">
         </div>
     </div>
-
     <script type="module" src="./src/app.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            window.paymentStatus()
+        })
+    </script>
 </body>
 
 </html>

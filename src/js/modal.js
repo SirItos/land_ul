@@ -72,11 +72,11 @@ export const showModal = ({ error = false, loader = false }) => {
   hideModal(false)
   const targetDialog = error ? '.errorDialog' : '.successDialog'
   if (loader) {
-    $('.loader').removeClass('hidden')
+    $('.loader').removeClass('hidden').addClass('flex')
     $('.successDialog').addClass('hidden')
     $('.errorDialog').addClass('hidden')
   } else {
-    $('.loader').addClass('hidden')
+    $('.loader').addClass('hidden').removeClass('flex')
     $(targetDialog).removeClass('hidden')
   }
   showWrapper()
@@ -91,9 +91,9 @@ export const showModal = ({ error = false, loader = false }) => {
  */
 export const showModalForm = (source) => {
   const tariff = {
-    light: 3499,
-    medium: 4999,
-    hardcore: 5999
+    light: 2790,
+    medium: 4290,
+    hardcore: 6990
   }
 
   hideModal(true)
@@ -110,7 +110,6 @@ export const showModalForm = (source) => {
 
 const setTariff = (tariff) => {
   modalForm.find('select').addClass('hidden').val(tariff)
-  console.log(modalForm.find('select'))
   console.log(modalForm.find('select').val())
 }
 
@@ -134,7 +133,8 @@ export const hideModal = (destroy = true) => {
  * @returns void
  */
 const downloadGuide = () => {
-  const a = document.querySelector('.get-result-link')
-  a.click()
   hideModal()
+  return
+  // const a = document.querySelector('.get-result-link')
+  // a.click()
 }
