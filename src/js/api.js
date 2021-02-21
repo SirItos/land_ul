@@ -16,7 +16,7 @@ export const sendRequest = async (payload, methods = 'addCustomer.php') => {
       return response.json()
     },
     () => {
-      return { status: false }
+      return null
     }
   )
 }

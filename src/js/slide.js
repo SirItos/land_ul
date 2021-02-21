@@ -17,10 +17,18 @@ export const initSlider = () => {
     centerMode: false,
     adaptiveHeight: false,
     responsive: true,
-    slidesToShow: 1,
+    slidesToShow: 3,
     arrows: false,
     autoplay: true,
-    autoplaySpeed: 6000
+    autoplaySpeed: 6000,
+    responsive: [
+      {
+        breakpoint: 786,
+        settings: {
+          slidesToShow: 1
+        }
+      }
+    ]
   })
 }
 

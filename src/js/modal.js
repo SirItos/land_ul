@@ -62,6 +62,14 @@ const showWrapper = () => {
 }
 
 /**
+ * Сокрытие враппера врапера для модальных окон
+ */
+const hideWrapper = () => {
+  wrapper.removeClass('opacity-100').addClass('opacity-0')
+  wrapper.css('z-index', '-10')
+}
+
+/**
  * Отображение модального окна.
  * Если есть флаг loader то отображается индикатор загрузки
  * @param {boolean} loader
@@ -79,6 +87,7 @@ export const showModal = ({ error = false, loader = false }) => {
     $('.loader').addClass('hidden').removeClass('flex')
     $(targetDialog).removeClass('hidden')
   }
+
   showWrapper()
   modal.removeClass('hidden')
   modal.removeClass('scale-0').addClass('scale-100')
@@ -121,6 +130,8 @@ export const hideModal = (destroy = true) => {
   wrapper.removeClass('opacity-100').addClass('opacity-0')
   modal.removeClass('scale-100').addClass('scale-0').addClass('hidden')
   modalForm.removeClass('scale-100').addClass('scale-0, hidden')
+  hideWrapper()
+  state.loader = false
   if (modalForm.find('.form') && destroy) {
     modalForm.find('button').off('click', '**')
     modalForm.find('.form').remove()

@@ -8,7 +8,7 @@ export const formRender = ({
   buttonName = 'Забронировать',
   noBinding = false
 }) => {
-  const domForm = `<div  class="form bg-white rounded-lg  shadow-lg  px-4 py-4"><form id="pay-form" class="space-y-8"><div class="text-2xl text-center"> Забронировать свое место
+  const domForm = `<div  class="form bg-white w-full rounded-lg  shadow-lg  px-4 py-4"><form id="pay-form" class="space-y-8"><div class="text-2xl text-center"> Забронировать свое место
                 </div>
                 <div class="w-full relative input-group">   
                 <select
@@ -30,5 +30,5 @@ export const formRender = ({
 
   $(target).append(domForm)
 
-  initForm(noBinding)
+  initForm(target, noBinding)
 }

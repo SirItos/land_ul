@@ -62,12 +62,11 @@ const paymentStatus = async (id) => {
         showModal({ error: false })
         return
       }
+
       hideModal()
-      alreadyAsk = false
     },
     () => {
-      showModal({ error: true })
-      alreadyAsk = false
+      hideModal()
     }
   )
 }

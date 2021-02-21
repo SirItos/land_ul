@@ -41,6 +41,7 @@ let withPrevent = true
 
 export const initForm = (parent = '#form', noBinding = false) => {
   // initFormMask()
+
   resetvalidationOnInput(inputs)
   if (!noBinding) {
     $(`${parent} .pay-form-submit`).click((event) => {
@@ -113,6 +114,16 @@ const submitForm = async (inputs, parent) => {
   )
 }
 
+const getTariffDescription = (tariff) => {
+  const desc = {
+    2790: '«Один в поле воин»',
+    4290: '«Мне нужна поддержка»',
+    6990: '«Путь: рука за руку»'
+  }
+
+  return desc[tariff]
+}
+
 const submitPyaForm = (orderId, payload) => {
   const payForm = $('#pay-form-hidden')
   const rounder_tarrif = Number(payload.tariff * 0.9345794392523364).toFixed(2)
@@ -120,8 +131,8 @@ const submitPyaForm = (orderId, payload) => {
   $('#sign').val(
     md5(`Olya_Kukuts:${rounder_tarrif}:${orderId}:tsB1Aq2wxG1WPqsT2b0B`)
   )
+  $('#desc').val(getTariffDescription(payload.tariff))
   $('#payEmail').val(payload.email)
-
   $('#summ').val(rounder_tarrif)
 
   showModal({ loader: true })

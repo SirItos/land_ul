@@ -17,9 +17,20 @@ module.exports = {
       orange: colors.orange,
       accent: '#A67610',
       gray: colors.gray,
-      red: colors.red
+      red: colors.red,
+      brown: {
+        DEFAULT: '#c3b0a2',
+        light: '#c3b0a2',
+        darken: '#52382b'
+      }
     },
     minWidth: {
+      '1/4': '25%',
+      '1/2': '50%',
+      '3/4': '75%',
+      full: '100%'
+    },
+    maxWidth: {
       '1/4': '25%',
       '1/2': '50%',
       '3/4': '75%',
